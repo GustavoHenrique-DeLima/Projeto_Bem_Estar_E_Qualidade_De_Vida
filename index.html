@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como você está?</title>
+    <style>
+        .Goku{
+            display: flex;
+            justify-content: center;
+        }
+        .Vegeta{
+            color:blue;
+           
+        }
+        .Moro{
+            color: darkblue;
+        }
+        .Granolah{
+            color: lightgreen;
+        }
+        .Jiren{
+            color: red;
+        }
+        .Bills{
+            color: purple;
+        }
+        .Buu{
+            color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="Goku">
+    <h1 class="Vegeta">COMO ESTÁ A SUA SAÚDE MENTAL?</h1>
+    </div>
+    <form action="">
+        <div class="Moro">
+        <p>1. Nos últimos 12 meses, você experimentou sintomas de ansiedade persistente ou tristeza profunda e falta de interesse por várias semanas consecutivas,ou algum outro sintoma que remeta à depressão ou ansiedade?</p>
+        </div>
+                <label><input type="radio" id="a1" name="ansiedade" value="frequentemente" required> Sim, frequentemente</label>
+                <br>
+                <label><input type="radio" id="a2" name="ansiedade" value="ocasionalmente"> Sim, ocasionalmente</label>
+                <br>
+                <label><input type="radio" id="a3" name="ansiedade" value="nao"> Não</label>
+                <br>
+                <label><input type="radio" id="a4" name="ansiedade" value="nao_sei"> Não tenho certeza</label>
+                <br>
+                <div class="Granolah">
+                <p>2. Nos últimos 30 dias, quantas vezes você sentiu que problemas emocionais ou de humor reduziram significativamente sua capacidade de trabalhar (ou estudar) ou o levaram a faltar ao seu compromisso?</p>
+                </div>
+                <label><input type="radio" id="b1" name="B" value="Nenhuma vez" required>Nenhuma vez</label>
+                <br>
+                <label><input type="radio" id="b2" name="B" value="De 1 a 3 vezes">De 1 a 3 vezes</label>
+                <br>
+                <label><input type="radio" id="b3" name="B" value="De 4 a 10 vezes">De 4 a 10 vezes</label>
+                <br>
+                <label><input type="radio" id="b4" name="B" value="Mais de 10 vezes">Mais de 10 vezes</label>
+                <br>
+                <div class="Jiren">
+                    <p>3. Se você ou um conhecido na faixa de 12 a 30 anos estivesse em uma crise emocional grave, você saberia qual apoio ou serviço de emergência procurar?</p>
+               </div>
+                <label><input type="radio" id="c1" name="C" value="Sim" required>Sim,saberia</label>
+                <br>
+                <label><input type="radio" id="c2" name="C" value="Não sei ao certo" required>Não sei ao certo</label>
+                <br>
+                <label><input type="radio" id="c3" name="C" value="Não saberia" required>Não saberia</label>
+                <br>
+                <div class="Bills">
+                   <p>4. Caso você tenha necessitado de acompanhamento psicológico ou psiquiátrico nos últimos 2 anos, qual foi o principal obstáculo (se houver) para iniciar ou manter o tratamento necessário?</p>
+                </div>
+                <label><input type="radio" id="d1" name="D1" value="Não fiz acompanhamento" required>Não fiz acompanhamento</label>
+                <br>
+                <label><input type="radio" id="d2" name="D2" value="Custo alto">Custo alto</label>
+                <br>
+                <label><input type="radio" id="d3" name="D3" value="Vergonha/Receio de ser julgado(a)">Vergonha/Receio de ser julgado(a)</label>
+                <br>
+                <label><input type="radio" id="d4" name="D4" value="Falta de profissionais">Falta de profissionais</label>
+                <br>
+                <label><input type="radio" id="d5" name="D5" value="Outro">Outro</label>
+                <br>
+                <div class="Buu">
+                 <p>5. A pandemia do COVID-19 deixou sequelas na sua saúde mental?</p>
+                </div>
+                <label><input type="radio" id="e1" name="E" value="Não" required>Não</label>
+                <br>
+                <label><input type="radio" id="e2" name="E" value="Sim" required>Sim</label>
+                <br>
+                <br>
+                <label>Enviar</label><input type="submit">
+                 
+    </form>
+    
+</body>
+</html>

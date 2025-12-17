@@ -1,97 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Como você está?</title>
+    <title>Gestão de Bem-Estar Estudantil</title>
     <style>
-        .Goku{
-            display: flex;
-            justify-content: center;
+        /*Esse trabalho tá me deixando doido*/
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f9; padding: 20px; }
+        
+        .container-principal { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+        .Goku { display: flex; justify-content: center; border-bottom: 2px solid #eee; margin-bottom: 20px; }
+        .Vegeta { color: blue; text-transform: uppercase; }
+
+        .Moro { color: darkblue; font-weight: bold; }
+        .Granolah { color: #2e7d32; font-weight: bold; }
+        .Jiren { color: red; font-weight: bold; }
+        .Bills { color: purple; font-weight: bold; }
+        .Buu { color: #d81b60; font-weight: bold; }
+
+        .pergunta-bloco { margin-bottom: 20px; padding: 10px; border-radius: 8px; }
+
+        .botoes-area { margin-top: 30px; display: flex; gap: 10px; }
+        .botao {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
         }
-        .Vegeta{
-            color:blue;
-           
-        }
-        .Moro{
-            color: darkblue;
-        }
-        .Granolah{
-            color: lightgreen;
-        }
-        .Jiren{
-            color: red;
-        }
-        .Bills{
-            color: purple;
-        }
-        .Buu{
-            color: pink;
+        .btn-enviar { background-color: #27ae60; color: white; }
+        .btn-lista { background-color: #3498db; color: white; }
+        .botao:hover { opacity: 0.8; transform: translateY(-2px); }
+
+        .lista-resultados { 
+            margin-top: 40px; 
+            padding-top: 20px; 
+            border-top: 3px double #ccc; 
         }
 
+        .item-exemplo {
+            background: #f9f9f9;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 5px solid blue;
+            list-style: none;
+            color: #666;
+        }
     </style>
 </head>
 <body>
+
+<div class="container-principal">
     <div class="Goku">
-    <h1 class="Vegeta">COMO ESTÁ A SUA SAÚDE MENTAL?</h1>
+        <h1 class="Vegeta">Gestão de Saúde Mental Estudantil</h1>
     </div>
-    <form action="">
-        <div class="Moro">
-        <p>1. Nos últimos 12 meses, você experimentou sintomas de ansiedade persistente ou tristeza profunda e falta de interesse por várias semanas consecutivas,ou algum outro sintoma que remeta à depressão ou ansiedade?</p>
+
+    <form id="formSaude">
+        <div class="pergunta-bloco">
+            <p class="Moro">1. Sintomas de ansiedade ou tristeza persistente (Últimos 12 meses):</p>
+            <label><input type="radio" name="ansiedade" value="frequentemente" required> Sim, frequentemente</label><br>
+            <label><input type="radio" name="ansiedade" value="ocasionalmente"> Sim, ocasionalmente</label><br>
+            <label><input type="radio" name="ansiedade" value="nao"> Não</label>
         </div>
-                <label><input type="radio" id="a1" name="ansiedade" value="frequentemente" required> Sim, frequentemente</label>
-                <br>
-                <label><input type="radio" id="a2" name="ansiedade" value="ocasionalmente"> Sim, ocasionalmente</label>
-                <br>
-                <label><input type="radio" id="a3" name="ansiedade" value="nao"> Não</label>
-                <br>
-                <label><input type="radio" id="a4" name="ansiedade" value="nao_sei"> Não tenho certeza</label>
-                <br>
-                <div class="Granolah">
-                <p>2. Nos últimos 30 dias, quantas vezes você sentiu que problemas emocionais ou de humor reduziram significativamente sua capacidade de trabalhar (ou estudar) ou o levaram a faltar ao seu compromisso?</p>
-                </div>
-                <label><input type="radio" id="b1" name="B" value="Nenhuma vez" required>Nenhuma vez</label>
-                <br>
-                <label><input type="radio" id="b2" name="B" value="De 1 a 3 vezes">De 1 a 3 vezes</label>
-                <br>
-                <label><input type="radio" id="b3" name="B" value="De 4 a 10 vezes">De 4 a 10 vezes</label>
-                <br>
-                <label><input type="radio" id="b4" name="B" value="Mais de 10 vezes">Mais de 10 vezes</label>
-                <br>
-                <div class="Jiren">
-                    <p>3. Se você ou um conhecido na faixa de 12 a 30 anos estivesse em uma crise emocional grave, você saberia qual apoio ou serviço de emergência procurar?</p>
-               </div>
-                <label><input type="radio" id="c1" name="C" value="Sim" required>Sim,saberia</label>
-                <br>
-                <label><input type="radio" id="c2" name="C" value="Não sei ao certo" required>Não sei ao certo</label>
-                <br>
-                <label><input type="radio" id="c3" name="C" value="Não saberia" required>Não saberia</label>
-                <br>
-                <div class="Bills">
-                   <p>4. Caso você tenha necessitado de acompanhamento psicológico ou psiquiátrico nos últimos 2 anos, qual foi o principal obstáculo (se houver) para iniciar ou manter o tratamento necessário?</p>
-                </div>
-                <label><input type="radio" id="d1" name="D1" value="Não fiz acompanhamento" required>Não fiz acompanhamento</label>
-                <br>
-                <label><input type="radio" id="d2" name="D2" value="Custo alto">Custo alto</label>
-                <br>
-                <label><input type="radio" id="d3" name="D3" value="Vergonha/Receio de ser julgado(a)">Vergonha/Receio de ser julgado(a)</label>
-                <br>
-                <label><input type="radio" id="d4" name="D4" value="Falta de profissionais">Falta de profissionais</label>
-                <br>
-                <label><input type="radio" id="d5" name="D5" value="Outro">Outro</label>
-                <br>
-                <div class="Buu">
-                 <p>5. A pandemia do COVID-19 deixou sequelas na sua saúde mental?</p>
-                </div>
-                <label><input type="radio" id="e1" name="E" value="Não" required>Não</label>
-                <br>
-                <label><input type="radio" id="e2" name="E" value="Sim" required>Sim</label>
-                <br>
-                <br>
-                <a href="Lista.html" class="botao">
-                   Ver mais sobre saúde mental?
-                </a>
+
+        <div class="pergunta-bloco">
+            <p class="Granolah">2. Quantas vezes problemas emocionais reduziram sua produtividade? (Últimos 30 dias):</p>
+            <label><input type="radio" name="produtividade" value="0" required> Nenhuma vez</label><br>
+            <label><input type="radio" name="produtividade" value="1-3"> De 1 a 3 vezes</label><br>
+            <label><input type="radio" name="produtividade" value="4+"> Mais de 4 vezes</label>
+        </div>
+
+        <div class="pergunta-bloco">
+            <p class="Jiren">3. Saberia onde buscar apoio em caso de crise grave?</p>
+            <label><input type="radio" name="apoio" value="sim" required> Sim, saberia</label><br>
+            <label><input type="radio" name="apoio" value="nao"> Não saberia</label>
+        </div>
+
+        <div class="pergunta-bloco">
+            <p class="Bills">4. Principal obstáculo para buscar tratamento:</p>
+            <label><input type="radio" name="obstaculo" value="nenhum" required> Nenhum / Já faço</label><br>
+            <label><input type="radio" name="obstaculo" value="custo"> Custo alto</label><br>
+            <label><input type="radio" name="obstaculo" value="estigma"> Vergonha ou medo de julgamento</label>
+        </div>
+
+        <div class="pergunta-bloco">
+            <p class="Buu">5. A pandemia deixou sequelas na sua saúde mental?</p>
+            <label><input type="radio" name="sequelas" value="sim" required> Sim</label><br>
+            <label><input type="radio" name="sequelas" value="nao"> Não</label>
+        </div>
+
+        <div class="botoes-area">
+            <button type="submit" class="botao btn-enviar">Cadastrar Respostas</button>
+            <a href="#lista" class="botao btn-lista">Ir para Lista</a>
+        </div>
     </form>
-    
+
+    <div id="lista" class="lista-resultados">
+        <h2 class="Vegeta">Registros Gerenciados</h2>
+        <ul id="listaEstudantes">
+            <li class="item-exemplo">Os dados cadastrados aparecerão aqui nesta área de lista.</li>
+        </ul>
+    </div>
+</div>
+
 </body>
 </html>
